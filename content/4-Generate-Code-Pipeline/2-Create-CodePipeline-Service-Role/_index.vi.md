@@ -1,5 +1,5 @@
 +++
-title = "CTạo service role cho dịch vụ CodePipeline"
+title = "Tạo service role cho dịch vụ CodePipeline"
 date = 2024
 weight = 2
 chapter = false

@@ -67,19 +67,6 @@
                 href="//localhost:1313/vi/4-generate-code-pipeline/1-create-s3-bucket/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-generate-code-pipeline/2-create-codepipeline-service-role/</loc>
-    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-generate-code-pipeline/2-create-codepipeline-service-role/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-generate-code-pipeline/2-create-codepipeline-service-role/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/3-create-eks-cluster/2-check-eks-cluster/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
@@ -91,6 +78,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/3-create-eks-cluster/2-check-eks-cluster/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/4-generate-code-pipeline/2-create-codepipeline-service-role/</loc>
+    <lastmod>1970-01-01T07:33:44+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-generate-code-pipeline/2-create-codepipeline-service-role/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-generate-code-pipeline/2-create-codepipeline-service-role/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparation-steps/2-create-workspace/</loc>

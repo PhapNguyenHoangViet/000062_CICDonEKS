@@ -35,18 +35,18 @@
 	"content": "Tạo S3 bucket Tạo Bucket này cho CodeBuild lưu artifact (tạo ra tập tin build.json sau mỗi lần build). Chúng ta sử dụng lệnh sau: ACCOUNT_ID=$(aws sts get-caller-identity | jq -r \u0026#39;.Account\u0026#39;)\raws s3 mb s3://eks-${ACCOUNT_ID}-codepipeline-artifacts Trong giao diện AWS Console Tìm S3 Chọn S3 Trong giao diện S3 Chọn S3 Chọn Bucket Xem bucket artifact đã tạo "
 },
 {
-	"uri": "//localhost:1313/vi/4-generate-code-pipeline/2-create-codepipeline-service-role/",
-	"title": "CTạo service role cho dịch vụ CodePipeline",
-	"tags": [],
-	"description": "",
-	"content": "Tạo service role cho dịch vụ CodePipeline CodePileline cần phải có IAM roles để build docker, push image và tương tác với EKS cluster bằng command kubectl.\nHãy tải các file policy json, tạo các role eks-CodePipelineServiceRole và thêm inline policy từ terminal như sau:\nwget https://raw.githubusercontent.com/First-Cloud-Journey/000062-EKSCICD/main/codepipeline/cpAssumeRolePolicyDocument.json\raws iam create-role --role-name eks-CodePipelineServiceRole --assume-role-policy-document file://cpAssumeRolePolicyDocument.json\rwget https://raw.githubusercontent.com/First-Cloud-Journey/000062-EKSCICD/main/codepipeline/cpPolicyDocument.json\raws iam put-role-policy --role-name eks-CodePipelineServiceRole --policy-name codepipeline-access --policy-document file://cpPolicyDocument.json "
-},
-{
 	"uri": "//localhost:1313/vi/3-create-eks-cluster/2-check-eks-cluster/",
 	"title": "Kiểm tra EKS Cluster",
 	"tags": [],
 	"description": "",
 	"content": "Kiểm tra EKS Cluster Trong giao diện AWS Console Tìm CloudFormation Chọn CloudFormation Trong giao diện CloudFormation Chọn Stack Xem các stack đã tạo Chạy câu lệnh để kiểm tra các nodes được tạo kubectl get nodes Trong giao diện AWS Console Tìm EKS Chọn EKS Trong giao diện EKS Chọn Cluster Xem cluster đã tạo Trong giao diện AWS Console Tìm EC2 Chọn EC2 Trong giao diện EC2 Chọn Instances Xem các instance đã tạo "
+},
+{
+	"uri": "//localhost:1313/vi/4-generate-code-pipeline/2-create-codepipeline-service-role/",
+	"title": "Tạo service role cho dịch vụ CodePipeline",
+	"tags": [],
+	"description": "",
+	"content": "Tạo service role cho dịch vụ CodePipeline CodePileline cần phải có IAM roles để build docker, push image và tương tác với EKS cluster bằng command kubectl.\nHãy tải các file policy json, tạo các role eks-CodePipelineServiceRole và thêm inline policy từ terminal như sau:\nwget https://raw.githubusercontent.com/First-Cloud-Journey/000062-EKSCICD/main/codepipeline/cpAssumeRolePolicyDocument.json\raws iam create-role --role-name eks-CodePipelineServiceRole --assume-role-policy-document file://cpAssumeRolePolicyDocument.json\rwget https://raw.githubusercontent.com/First-Cloud-Journey/000062-EKSCICD/main/codepipeline/cpPolicyDocument.json\raws iam put-role-policy --role-name eks-CodePipelineServiceRole --policy-name codepipeline-access --policy-document file://cpPolicyDocument.json "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparation-steps/2-create-workspace/",
