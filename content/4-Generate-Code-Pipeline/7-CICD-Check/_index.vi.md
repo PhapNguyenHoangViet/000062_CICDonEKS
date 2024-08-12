@@ -14,7 +14,7 @@ pre = "<b>4.7. </b>"
 - Chỉnh sửa code trong file **index.html**. Trong bài này chỉnh code phần title **(dòng 48)**chuyển từ **John Doe** thành **AWS First Cloud Journey**
 - Sau đó, chọn **Commit changes**
 
-![00001-CICD-Check](/images/4-Generate-Code-Pipeline/7-CICD-Check/00001-CICD-Check.png?width=90pc)
+![00001-CICD-Check](../images/4-Generate-Code-Pipeline/7-CICD-Check/00001-CICD-Check.png?width=90pc)
 
 2. Sau khi push code, **CodePipeline** sẽ được trigger để thực thi **CodeBuild**.
 - Vào trang quản trị **CodePipeline** sẽ thấy trạng thái của pipeline là **In Progress**
@@ -27,18 +27,18 @@ pre = "<b>4.7. </b>"
    - Đẩy image lên **ECR repository**
    - Triển khai cập nhật ứng dụng lên **EKS cluster**
 
-![00002-CICD-Check](/images/4-Generate-Code-Pipeline/7-CICD-Check/00002-CICD-Check.png?width=90pc)
+![00002-CICD-Check](../images/4-Generate-Code-Pipeline/7-CICD-Check/00002-CICD-Check.png?width=90pc)
 
 
 3. Deploy application updates to **EKS cluster** Wait about 5-10 minutes for the build process to complete and go to **Succeeded** state.
 
-![00003-CICD-Check](/images/4-Generate-Code-Pipeline/7-CICD-Check/00003-CICD-Check.png?width=90pc)
+![00003-CICD-Check](../images/4-Generate-Code-Pipeline/7-CICD-Check/00003-CICD-Check.png?width=90pc)
 
 
 4. Vào website URL xem thay đổi.
 - Lúc này title của website đã chuyển thành AWS First Cloud Journey
 
-![00004-CICD-Check](/images/4-Generate-Code-Pipeline/7-CICD-Check/00004-CICD-Check.png?width=90pc)
+![00004-CICD-Check](../images/4-Generate-Code-Pipeline/7-CICD-Check/00004-CICD-Check.png?width=90pc)
 
 
 **Chúc mừng bạn đã hoàn thành bài lab.!!!**

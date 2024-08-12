@@ -13,13 +13,13 @@ pre = "<b>4.4. </b>"
 ```
 kubectl get configmaps aws-auth -n kube-system -o yaml > aws-auth.yaml
 ```
-![00001-configure-rbac](/images/4-Generate-Code-Pipeline/4-configure-rbac/00001-configure-rbac.png?width=90pc)
+![00001-configure-rbac](../images/4-Generate-Code-Pipeline/4-configure-rbac/00001-configure-rbac.png?width=90pc)
 
 2. Open the file **aws-auth.yaml** :
 ```
 nano aws-auth.yaml
 ```
-![00002-configure-rbac](/images/4-Generate-Code-Pipeline/4-configure-rbac/00002-configure-rbac.png?width=90pc)
+![00002-configure-rbac](../images/4-Generate-Code-Pipeline/4-configure-rbac/00002-configure-rbac.png?width=90pc)
 
 3. Edit this aws-auth.yaml file, adding an item in the data.mapRoles array:
 ```
@@ -29,7 +29,7 @@ nano aws-auth.yaml
   username: codebuild-eks
 
 ```
-![00003-configure-rbac](/images/4-Generate-Code-Pipeline/4-configure-rbac/00003-configure-rbac.png?width=90pc)
+![00003-configure-rbac](../images/4-Generate-Code-Pipeline/4-configure-rbac/00003-configure-rbac.png?width=90pc)
 4. The aws-auth.yaml file after adding the eks-CodeBuildServiceRole role has the following form:
 {{% notice note %}}
 Remove the lines metadata.creationTimestamp and metadata.resourceVersion
@@ -66,10 +66,10 @@ metadata:
   uid: a2862e92-4697-4654-bb19-dc28b17dc21b
 ```
 
-![00005-configure-rbac](/images/4-Generate-Code-Pipeline/4-configure-rbac/00005-configure-rbac.png?width=90pc)
+![00005-configure-rbac](../images/4-Generate-Code-Pipeline/4-configure-rbac/00005-configure-rbac.png?width=90pc)
 5. Apply the changed aws-auth.yaml file from the terminal:
 ```
 kubectl apply -f aws-auth.yaml
 ```
 
-![00004-configure-rbac](/images/4-Generate-Code-Pipeline/4-configure-rbac/00004-configure-rbac.png?width=90pc)
+![00004-configure-rbac](../images/4-Generate-Code-Pipeline/4-configure-rbac/00004-configure-rbac.png?width=90pc)
