@@ -42,4 +42,4 @@ kubectl get svc
 
 5. Truy cập vào website
 
-![00006-Deploy-Application](/000062_CICDonEKS/images/3-Create-EKS-cluster/3-Deploy-Application/00006-Deploy-Application.png?width=90pc)
+![00005-Deploy-Application](/000062_CICDonEKS/images/3-Create-EKS-cluster/3-Deploy-Application/00005-Deploy-Application.png?width=90pc)
