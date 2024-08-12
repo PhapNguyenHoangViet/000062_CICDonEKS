@@ -98,18 +98,18 @@
 	"content": "Cấu hình RBAC Để CodeBuild có thể tương tác với EKS, chúng ta sẽ chỉnh sửa configMap aws-auth Từ terminal mà bạn đã kết nối EKS cluster, lấy bản sao configMap aws-auth bằng command: kubectl get configmaps aws-auth -n kube-system -o yaml \u0026gt; aws-auth.yaml Mở tập tin aws-auth.yaml vừa tạo ở trên: nano aws-auth.yaml Sửa file aws-auth.yaml này, thêm một item trong mảng data.mapRoles: - groups:\r- system:masters\rrolearn: arn:aws:iam::{$AWS_ACCOUNT_ID}}:role/eks-CodeBuildServiceRole\rusername: codebuild-eks Tập tin aws-auth.yaml sau khi thêm role eks-CodeBuildServiceRole có dạng như sau: Remove the lines metadata.creationTimestamp and metadata.resourceVersion\napiVersion: v1\rdata:\rmapRoles: |\r- groups:\r- system:bootstrappers\r- system:nodes\rrolearn: arn:aws:iam::451085899692:role/eksctl-k8s-demo-nodegroup-k8s-dem-NodeInstanceRole-LYNRCIX49ZOU\rusername: system:node:{{EC2PrivateDNSName}}\r- groups:\r- system:masters\rrolearn: arn:aws:iam::{$AWS_ACCOUNT_ID}}:role/eks-CodeBuildServiceRole\rusername: codebuild-eks\rkind: ConfigMap\rmetadata:\rcreationTimestamp: \u0026#34;2022-04-26T10:21:52Z\u0026#34;\rmanagedFields:\r- apiVersion: v1\rfieldsType: FieldsV1\rfieldsV1:\rf:data:\r.: {}\rf:mapRoles: {}\rmanager: vpcLambda\roperation: Update\rtime: \u0026#34;2022-04-26T10:21:52Z\u0026#34;\rname: aws-auth\rnamespace: kube-system\rresourceVersion: \u0026#34;2691\u0026#34;\ruid: a2862e92-4697-4654-bb19-dc28b17dc21b 5. Apply tập tin aws-auth.yaml đã thay đổi từ terminal:\nkubectl apply -f aws-auth.yaml "
 },
 {
+	"uri": "//localhost:1313/vi/4-generate-code-pipeline/",
+	"title": "Create CI/CD",
+	"tags": [],
+	"description": "",
+	"content": "Tổng quan Trong các bước tiếp theo, chúng ta sẽ tạo một Deployment Pipeline bằng AWS CodePipeline và tích hợp với công cụ third party là GitHub. Khi chúng ta thay đổi code trên GitHub, Pipeline của chúng ta sẽ được kích hoạt và deploy phiên bản ứng dụng mới lên ứng dụng web chúng ta đã chạy trên EKS Cluster. Nội dung Tạo S3 bucket Tạo CodePipeline Service Role Tạo Code Buid Service Role Cấu hình RBAC Forke source code Tạo CodePipeline Kiểm tra CI/CD "
+},
+{
 	"uri": "//localhost:1313/vi/2-preparation-steps/4-install-eksctl/",
 	"title": "Cài đặt eksctl",
 	"tags": [],
 	"description": "",
 	"content": "Cài đặt eksctl Trong phần này chúng ta sẽ thực hiện cài đặt công cụ eksctl vào CloudShell Workspace. Chạy câu lệnh để tải về công cụ eksctl. curl --silent --location \u0026#34;https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz\u0026#34; | tar xz -C /tmp\rsudo mv -v /tmp/eksctl /usr/local/bin Kiểm tra eksctl hoạt động hay không bằng câu lệnh dưới đây. eksctl version Kích hoạt tính năng bash-completion của eksctl eksctl completion bash \u0026gt;\u0026gt; ~/.bash_completion\r. /etc/profile.d/bash_completion.sh\r. ~/.bash_completion Thông tin cài đặt Eksctl xem thêm tại Eksctl\n"
-},
-{
-	"uri": "//localhost:1313/vi/4-generate-code-pipeline/",
-	"title": "Hỗ trợ Xác thực Tài khoản",
-	"tags": [],
-	"description": "",
-	"content": "Nội dung:\nKiểm tra các thông tin Tạo case hỗ trợ với AWS Support Trong quá trình khởi tạo tài khoản AWS, ở bước xác thực thông tin số điện thoại liên lạc, đôi khi sẽ xảy ra tình trạng không nhận được tin nhắn SMS hoặc cuộc gọi từ phía AWS. Trong trường hợp đó, hãy làm theo các bước sau để hoàn thành việc xác nhận thông tin tài khoản:\nKiểm tra các thông tin Đầu tiên, hãy kiểm tra lại các thông tin tài khoản của bạn và đảm bảo chúng đã được nhập chính xác:\nBạn đã nhập thông tin số điện thoại và chọn mã vùng quốc tế chính xác để nhận SMS hay cuộc gọi. Nếu bạn sử dụng điện thoại di động, kiểm tra điện thoại của bạn để chắc chắn bạn vẫn đang trong vòng phủ sóng để nhận SMS hay cuộc gọi. Thông tin về phương thức thanh toán đã được nhập chính xác. Hãy chắc chắn rằng số điện thoại mà bạn cung cấp trong tài khoản AWS của bạn có thể liên lạc được.\nTạo case hỗ trợ với AWS Support Sau khi kiểm tra thông tin chính xác nhưng vẫn chưa nhận được tin nhắn SMS hoặc cuộc gọi xác thực, AWS Support sẽ hỗ trợ bạn kích hoạt tài khoản một cách thủ công.\nTruy cập vào AWS Support console, chọn Create case. Chọn Account and billing support và nhập các thông tin hỗ trợ: Type: chọn Account. Category: chọn Activation. Subject: viết ngắn gọn tình trạng gặp phải của bạn (VD: Did not receive an SMS message or call for verification) Description: Cung cấp chi tiết tình trạng gặp phải và thông tin về thời gian bạn cần hỗ trợ kích hoạt tài khoản. Attachments: Đính kèm hình ảnh mô tả bước xác thực đang vướng phải. Ở mục Contact options, chọn Chat ở Contact methods. Chọn Submit. Đội ngũ AWS Support sẽ liên lạc và hỗ trợ kích hoạt tài khoản của bạn. Bạn có thể tạo yêu cầu hỗ trợ với AWS Support ngay cả khi tài khoản của bạn chưa được kích hoạt.\n"
 },
 {
 	"uri": "//localhost:1313/vi/5-clean-up-resources/",
@@ -137,7 +137,7 @@
 	"title": "Kiểm tra CI/CD",
 	"tags": [],
 	"description": "",
-	"content": "Kiểm tra CI/CD pipeline Vào GitHub của bạn https://github.com/{GITHUB_ACCOUNT}/000062-websource Chọn repository đã fork Mở file index.html, chọn icon chỉnh sửa Chỉnh sửa code trong file index.html. Trong bài này chỉnh code phần title **(dòng 48)**chuyển từ John Doe thành AWS First Cloud Journey Sau đó, chọn Commit changes Sau khi push code, CodePipeline sẽ được trigger để thực thi CodeBuild. Vào trang quản trị CodePipeline sẽ thấy trạng thái của pipeline là In Progress Pipele của có 2 stage Source Pull source từ GitHub Đóng gói source cho stage build Build Tạo Docker image từ source Đẩy image lên ECR repository Triển khai cập nhật ứng dụng lên EKS cluster Deploy application updates to EKS cluster Wait about 5-10 minutes for the build process to complete and go to Succeeded state. Vào website URL xem thay đổi. Lúc này title của website đã chuyển thành AWS First Cloud Journey Congratulations on completing the lab!!!\n"
+	"content": "Kiểm tra CI/CD pipeline Vào GitHub của bạn https://github.com/{GITHUB_ACCOUNT}/000062-websource Chọn repository đã fork Mở file index.html, chọn icon chỉnh sửa Chỉnh sửa code trong file index.html. Trong bài này chỉnh code phần title **(dòng 48)**chuyển từ John Doe thành AWS First Cloud Journey Sau đó, chọn Commit changes Sau khi push code, CodePipeline sẽ được trigger để thực thi CodeBuild. Vào trang quản trị CodePipeline sẽ thấy trạng thái của pipeline là In Progress Pipele của có 2 stage Source Pull source từ GitHub Đóng gói source cho stage build Build Tạo Docker image từ source Đẩy image lên ECR repository Triển khai cập nhật ứng dụng lên EKS cluster Deploy application updates to EKS cluster Wait about 5-10 minutes for the build process to complete and go to Succeeded state. Vào website URL xem thay đổi. Lúc này title của website đã chuyển thành AWS First Cloud Journey Chúc mừng bạn đã hoàn thành bài lab.!!!\n"
 },
 {
 	"uri": "//localhost:1313/vi/categories/",
