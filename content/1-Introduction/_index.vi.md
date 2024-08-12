@@ -13,7 +13,7 @@ pre = "<b>1. </b>"
    - Trong bài lab này, chúng ta sẽ tạo một **Kubernetes Cluster** đơn giản trên **AWS EKS (Elastic Kubernetes Service)**.
    - Sau đó, mình sẽ triển khai trang web trên cluster và sử dụng **AWS CodePipeLine** để triển khai tự động.
 
-![CI_CDwithAWSCodePipeline](/000062_CICDonEKS/images/1-Introduction/CI_CDwithAWSCodePipeline.png?width=90pc)
+![architecture](/000062_CICDonEKS/images/CI_CDwithAWSCodePipeline.png?width=90pc)
 
 ### Content
 
