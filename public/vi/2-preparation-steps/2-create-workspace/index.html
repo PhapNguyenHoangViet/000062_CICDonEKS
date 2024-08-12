@@ -12,21 +12,21 @@
     <title>Tạo Workspace :: CI/CD trên EKS</title>
 
     
-    <link href="/css/nucleus.css?1723457157" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1723457157" rel="stylesheet">
-    <link href="/css/hybrid.css?1723457157" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1723457157" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1723457157" rel="stylesheet">
-    <link href="/css/auto-complete.css?1723457157" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1723457157" rel="stylesheet">
-    <link href="/css/theme.css?1723457157" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1723457157" rel="stylesheet">
+    <link href="/css/nucleus.css?1723457326" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1723457326" rel="stylesheet">
+    <link href="/css/hybrid.css?1723457326" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1723457326" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1723457326" rel="stylesheet">
+    <link href="/css/auto-complete.css?1723457326" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1723457326" rel="stylesheet">
+    <link href="/css/theme.css?1723457326" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1723457326" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1723457157" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1723457326" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1723457157"></script>
+    <script src="/js/jquery-3.3.1.min.js?1723457326"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1723457157"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1723457157"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1723457326"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1723457326"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1723457157"></script>
+<script type="text/javascript" src="/js/search.js?1723457326"></script>
 
     
   </div>
@@ -855,7 +855,7 @@
 <li>Tìm<strong>CloudShell</strong></li>
 <li>Chon <strong>CloudShell</strong></li>
 </ul>
-<p><img alt="00001-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00001-Create-Workspace.png?width=90pc"></p>
+<p><img alt="00001-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00001-Create-Workspace.png?width=90pc"></p>
 <ol start="2">
 <li>Trong giao diện <strong>AWS CloudShell</strong></li>
 </ol>
@@ -863,17 +863,17 @@
 <li>Thường thì khi chọn vào dịch vụ AWS CloudShell sẽ tự động tạo ra môi trường CLI cho chúng ta thực thi lệnh.</li>
 <li>Nhưng trong vài trường hợp, CloudShell sẽ không tự động tạo sẵn, do đó, ta sẽ ấn chọn Open environment – trong đó là tên region khi mở CloudShell.</li>
 </ul>
-<p><img alt="00002-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00002-Create-Workspace.png?width=90pc"></p>
+<p><img alt="00002-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00002-Create-Workspace.png?width=90pc"></p>
 <ol start="3">
 <li>Copy and paste the following command into the <strong>CloudShell</strong> Terminal to install tools that support text processing on the command line.</li>
 </ol>
 <pre tabindex="0"><code>sudo yum -y install jq gettext bash-completion
-</code></pre><p><img alt="00003-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00003-Create-Workspace.png?width=90pc"></p>
+</code></pre><p><img alt="00003-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00003-Create-Workspace.png?width=90pc"></p>
 <ol start="4">
 <li>Copy và Paste đoạn lệnh dưới đây vào Terminal của CloudShell để cài đặt các công cụ hỗ trợ xử lý text trên dòng lệnh.</li>
 </ol>
 <pre tabindex="0"><code>sudo pip install --upgrade awscli &amp;&amp; hash -r
-</code></pre><p><img alt="00004-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00004-Create-Workspace.png?width=90pc"></p>
+</code></pre><p><img alt="00004-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00004-Create-Workspace.png?width=90pc"></p>
 <ol start="5">
 <li>Chúng ta sẽ cấu hình <strong>aws cli</strong> sử dụng Region hiện tại.</li>
 </ol>
@@ -881,12 +881,12 @@
 export AWS_REGION=&lt;REGION&gt;
 export AZS=($(aws ec2 describe-availability-zones --query &#39;AvailabilityZones[].ZoneName&#39; --output text --region $AWS_REGION))
 </code></pre><p><strong>export AWS_REGION=&lsquo;yourREGION&rsquo;</strong>, thay trường thành id của region mà CloudShell đang mở.</p>
-<p><img alt="00005-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00005-Create-Workspace.png?width=90pc"></p>
+<p><img alt="00005-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00005-Create-Workspace.png?width=90pc"></p>
 <ol start="6">
 <li>Kiểm tra Region hiện tại</li>
 </ol>
 <pre tabindex="0"><code>test -n &#34;$AWS_REGION&#34; &amp;&amp; echo AWS_REGION is &#34;$AWS_REGION&#34; || echo AWS_REGION is not set
-</code></pre><p><img alt="00006-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00006-Create-Workspace.png?width=90pc"></p>
+</code></pre><p><img alt="00006-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00006-Create-Workspace.png?width=90pc"></p>
 <ol start="7">
 <li>Chúng ta sẽ lưu các thông tin cấu hình vào bash_profile</li>
 </ol>
@@ -895,12 +895,12 @@ echo &#34;export AWS_REGION=$AWS_REGION&#34; | tee -a ~/.bash_profile
 echo &#34;export AZS=${AZS[@]}&#34; | tee -a ~/.bash_profile
 aws configure set default.region $AWS_REGION
 aws configure get default.region
-</code></pre><p><img alt="00007-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00007-Create-Workspace.png?width=90pc"></p>
+</code></pre><p><img alt="00007-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00007-Create-Workspace.png?width=90pc"></p>
 <ol start="8">
 <li>Chúng ta sẽ sử dụng câu lệnh để kiểm tra CloudShell đang sử dụng IAM Role có chính xác không.</li>
 </ol>
 <pre tabindex="0"><code>aws sts get-caller-identity --query Arn | grep CloudFormation-Role -q &amp;&amp; echo &#34;IAM role valid&#34; || echo &#34;IAM role NOT valid&#34;
-</code></pre><p><img alt="00008-Create-Workspace" src="/images/2-Preparation-steps/2-Create-Workspace/00008-Create-Workspace.png?width=90pc"></p>
+</code></pre><p><img alt="00008-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00008-Create-Workspace.png?width=90pc"></p>
 
 
 
@@ -1279,19 +1279,19 @@ aws configure get default.region
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1723457157"></script>
-    <script src="/js/perfect-scrollbar.min.js?1723457157"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1723457157"></script>
-    <script src="/js/jquery.sticky.js?1723457157"></script>
-    <script src="/js/featherlight.min.js?1723457157"></script>
-    <script src="/js/highlight.pack.js?1723457157"></script>
+    <script src="/js/clipboard.min.js?1723457326"></script>
+    <script src="/js/perfect-scrollbar.min.js?1723457326"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1723457326"></script>
+    <script src="/js/jquery.sticky.js?1723457326"></script>
+    <script src="/js/featherlight.min.js?1723457326"></script>
+    <script src="/js/highlight.pack.js?1723457326"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1723457157"></script>
-    <script src="/js/learn.js?1723457157"></script>
-    <script src="/js/hugo-learn.js?1723457157"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1723457326"></script>
+    <script src="/js/learn.js?1723457326"></script>
+    <script src="/js/hugo-learn.js?1723457326"></script>
 
-    <link href="/mermaid/mermaid.css?1723457157" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1723457157"></script>
+    <link href="/mermaid/mermaid.css?1723457326" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1723457326"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
