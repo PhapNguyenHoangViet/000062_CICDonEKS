@@ -12,7 +12,8 @@ pre = "<b>2.1. </b>"
 - Select IAM
 
 ![0001-createiamuser](/000062_CICDonEKS/images/2-Preparation-steps/1-Create-IAM-User/0001-createiamuser.png?width=90pc)
-1. In the IAM interface
+
+2. In the IAM interface
 - Select User
 - Select Add users
 
