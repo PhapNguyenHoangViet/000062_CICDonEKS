@@ -15,7 +15,6 @@ pre = "<b>1. </b>"
    - Then I will deploy the site on the cluster and use **AWS CodePipeLine** for automated deployment.
 
 ![CI_CDwithAWSCodePipeline](/000062_CICDonEKS/images/1-introduction/CI_CDwithAWSCodePipeline.png?width=90pc)
-![CI_CDwithAWSCodePipeline](/images/1-introduction/CI_CDwithAWSCodePipeline.png?width=90pc)
 
 ### Content
   1. [Introduction](1-Introduction/)

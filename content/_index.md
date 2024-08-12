@@ -14,7 +14,3 @@ chapter = false
 - In this exercise, we will create an **EKS Cluster** and deploy a pipeline to automatically deploy to production every time there is a code change using the **AWS CodePipeline service**.
 
 ![architecture](/000062_CICDonEKS/images/architecture.png?width=90pc)
-
-![architecture](/images/architecture.png?width=90pc)
-
-![architecture](../images/architecture.png?width=90pc)
