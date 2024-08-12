@@ -19,6 +19,6 @@ aws iam put-role-policy --role-name eks-CodePipelineServiceRole --policy-name co
 
 ```
 
-![00001-Create-CodePipeline-Service-Role](/images/4-Generate-Code-Pipeline/2-Create-CodePipeline-Service-Role/00001-Create-CodePipeline-Service-Role.png?width=90pc)
+![00001-Create-CodePipeline-Service-Role](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/2-Create-CodePipeline-Service-Role/00001-Create-CodePipeline-Service-Role.png?width=90pc)
 
-![00002-Create-CodePipeline-Service-Role](/images/4-Generate-Code-Pipeline/2-Create-CodePipeline-Service-Role/00002-Create-CodePipeline-Service-Role.png?width=90pc)
+![00002-Create-CodePipeline-Service-Role](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/2-Create-CodePipeline-Service-Role/00002-Create-CodePipeline-Service-Role.png?width=90pc)

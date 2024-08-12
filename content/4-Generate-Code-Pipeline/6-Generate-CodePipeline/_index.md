@@ -11,26 +11,26 @@ pre = "<b>4.6. </b>"
 1. We will create a CodePipeline using the AWS CloudFormation engine.
 - Select Download [CloudFormation template file](https://raw.githubusercontent.com/First-Cloud-Journey/000062-EKSCICD/main/code_pipeline_fcj.yml)
 
-![00001-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00001-Generate-CodePipeline.png?width=90pc)
+![00001-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00001-Generate-CodePipeline.png?width=90pc)
 
 - Ctrl A
 - Ctrl C
 - Create New Text Document.txt
 
-![000013-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000013-Generate-CodePipeline.png?width=90pc)
+![000013-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000013-Generate-CodePipeline.png?width=90pc)
 
 - Rename code_pipeline_fcj.yml
 
-![000014-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000014-Generate-CodePipeline.png?width=90pc)
+![000014-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000014-Generate-CodePipeline.png?width=90pc)
 - Ctrl V
 
-![000015-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000015-Generate-CodePipeline.png?width=90pc)
+![000015-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000015-Generate-CodePipeline.png?width=90pc)
 - Add in file : **rm -f /etc/apt/sources.list.d/sbt.list**
 ```
 - rm -f /etc/apt/sources.list.d/sbt.list
 ```
 
-![000016-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000016-Generate-CodePipeline.png?width=90pc)
+![000016-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000016-Generate-CodePipeline.png?width=90pc)
 
 
   
@@ -38,7 +38,7 @@ pre = "<b>4.6. </b>"
 - Find **CloudFormation**
 - Select **CloudFormation**
 
-![00002-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00002-Generate-CodePipeline.png?width=90pc)
+![00002-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00002-Generate-CodePipeline.png?width=90pc)
 
 
 3. In the **CloudFormation** interface
@@ -46,7 +46,7 @@ pre = "<b>4.6. </b>"
 - Select **Create stack**
 - Select **With new resources (standard)**
 
-![00003-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00003-Generate-CodePipeline.png?width=90pc)
+![00003-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00003-Generate-CodePipeline.png?width=90pc)
 
 4. In the **Create stack** interface
 - Select **Template is ready**
@@ -55,11 +55,11 @@ pre = "<b>4.6. </b>"
 - Select the downloaded **CloudFormation template** file. Example `code_pipeline_fcj.yml`
 - Select **Next**
 
-![00004-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00004-Generate-CodePipeline.png?width=90pc)
+![00004-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00004-Generate-CodePipeline.png?width=90pc)
 
 5. In the **Stack name** section, enter `Eks-stack`
 
-![00005-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00005-Generate-CodePipeline.png?width=90pc)
+![00005-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00005-Generate-CodePipeline.png?width=90pc)
 
 
 6. Next, fill in the following information:
@@ -72,35 +72,35 @@ pre = "<b>4.6. </b>"
 - Enter **EksNamespace**
 - Select **Next**
 
-![00006-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00006-Generate-CodePipeline.png?width=90pc)
+![00006-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00006-Generate-CodePipeline.png?width=90pc)
 
 
 7. Scroll to the bottom of the page and select **Next**
 
-![00007-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00007-Generate-CodePipeline.png?width=90pc)
+![00007-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00007-Generate-CodePipeline.png?width=90pc)
 
 8. Scroll to the bottom of the page and select **Create stack**
 
-![00008-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00008-Generate-CodePipeline.png?width=90pc)
+![00008-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00008-Generate-CodePipeline.png?width=90pc)
 
 9.  Complete stack creation
 
-![00009-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00009-Generate-CodePipeline.png?width=90pc)
+![00009-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00009-Generate-CodePipeline.png?width=90pc)
 
 10. In the [AWS Console](https://aws.amazon.com/console/)
 - Find **CodePipeline**
 - Select **CodePipeline**
 
-![000010-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000010-Generate-CodePipeline.png?width=90pc)
+![000010-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000010-Generate-CodePipeline.png?width=90pc)
 
 11. CI/CD . Process
 
-![000011-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000011-Generate-CodePipeline.png?width=90pc)
+![000011-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000011-Generate-CodePipeline.png?width=90pc)
 
 12. CI/CD process completes when entering **Succeeded** state
 
-![000012-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000012-Generate-CodePipeline.png?width=90pc)
+![000012-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000012-Generate-CodePipeline.png?width=90pc)
 
 
 13. Check
-![000017-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000017-Generate-CodePipeline.png?width=90pc)
+![000017-Generate-CodePipeline](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000017-Generate-CodePipeline.png?width=90pc)
