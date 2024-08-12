@@ -16,14 +16,14 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv -v /tmp/eksctl /usr/local/bin
 
 ```
-![00001-Install-eksctl](../images/2-preparation-steps/4-Install-eksctl/00001-Install-eksctl.png?width=90pc)
+![00001-Install-eksctl](/images/2-preparation-steps/4-Install-eksctl/00001-Install-eksctl.png?width=90pc)
 
 2. Check if eksctl works or not with the command below.
 ```
 eksctl version
 
 ```
-![00002-Install-eksctl](../images/2-preparation-steps/4-Install-eksctl/00002-Install-eksctl.png?width=90pc)
+![00002-Install-eksctl](/images/2-preparation-steps/4-Install-eksctl/00002-Install-eksctl.png?width=90pc)
 
 3. Enable bash-completion of eksctl
 ```
@@ -32,7 +32,7 @@ eksctl completion bash >> ~/.bash_completion
 . ~/.bash_completion
 
 ```
-![00003-Install-eksctl](../images/2-preparation-steps/4-Install-eksctl/00003-Install-eksctl.png?width=90pc)
+![00003-Install-eksctl](/images/2-preparation-steps/4-Install-eksctl/00003-Install-eksctl.png?width=90pc)
 
 
 {{% notice note %}}

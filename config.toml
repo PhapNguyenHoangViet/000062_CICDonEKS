@@ -5,12 +5,14 @@ theme = "hugo-theme-learn"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
+baseURL = "https://PhapNguyenHoangViet.github.io/CICDonEKS/"
+
 
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "workshop"
   # Git hub repo link
-  editURL = ""
+  editURL = "https://PhapNguyenHoangViet.github.io/CICDonEKS/"
   description = ""
   author = "vietphap090603@gmail.com"
   showVisitedLinks = true

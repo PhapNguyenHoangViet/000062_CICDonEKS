@@ -11,26 +11,26 @@ pre = "<b>4.6. </b>"
 1. Chúng ta sẽ tạo CodePipeline sử dụng công cụ AWS CloudFormation.
 - Chọn Download [CloudFormation template file](https://raw.githubusercontent.com/First-Cloud-Journey/000062-EKSCICD/main/code_pipeline_fcj.yml)
 
-![00001-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00001-Generate-CodePipeline.png?width=90pc)
+![00001-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00001-Generate-CodePipeline.png?width=90pc)
 
 - Ctrl A
 - Ctrl C
 - Tạo file New Text Document.txt
 
-![000013-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000013-Generate-CodePipeline.png?width=90pc)
+![000013-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000013-Generate-CodePipeline.png?width=90pc)
 
 - Đổi tên code_pipeline_fcj.yml
 
-![000014-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000014-Generate-CodePipeline.png?width=90pc)
+![000014-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000014-Generate-CodePipeline.png?width=90pc)
 - Ctrl V
 
-![000015-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000015-Generate-CodePipeline.png?width=90pc)
+![000015-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000015-Generate-CodePipeline.png?width=90pc)
 - Thêm vào file  : **rm -f /etc/apt/sources.list.d/sbt.list**
 ```
 - rm -f /etc/apt/sources.list.d/sbt.list
 ```
 
-![000016-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000016-Generate-CodePipeline.png?width=90pc)
+![000016-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000016-Generate-CodePipeline.png?width=90pc)
 
 
   
@@ -38,7 +38,7 @@ pre = "<b>4.6. </b>"
 - Tìm  **CloudFormation**
 - Chọn  **CloudFormation**
 
-![00002-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00002-Generate-CodePipeline.png?width=90pc)
+![00002-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00002-Generate-CodePipeline.png?width=90pc)
 
 
 3. Trong giao diện CloudFormation
@@ -46,7 +46,7 @@ pre = "<b>4.6. </b>"
 - Chọn  **Create stack**
 - Chọn  **With new resources (standard)**
 
-![00003-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00003-Generate-CodePipeline.png?width=90pc)
+![00003-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00003-Generate-CodePipeline.png?width=90pc)
 
 4. Trong giao diện **Create stack**
 - Chọn  **Template is ready**
@@ -55,11 +55,11 @@ pre = "<b>4.6. </b>"
 - Chọn  **CloudFormation template** đã tải về. Ví dụ `code_pipeline_fcj.yml`
 - Chọn  **Next**
 
-![00004-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00004-Generate-CodePipeline.png?width=90pc)
+![00004-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00004-Generate-CodePipeline.png?width=90pc)
 
 5. Phần **Stack name**, nhập `Eks-stack`
 
-![00005-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00005-Generate-CodePipeline.png?width=90pc)
+![00005-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00005-Generate-CodePipeline.png?width=90pc)
 
 
 6. Tiếp theo, điền thông tin các mục sau:
@@ -72,35 +72,35 @@ pre = "<b>4.6. </b>"
 - Nhập **EksNamespace**
 - Chọn  **Next**
 
-![00006-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00006-Generate-CodePipeline.png?width=90pc)
+![00006-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00006-Generate-CodePipeline.png?width=90pc)
 
 
 7. Kéo xuống cuối trang và chọn **Next**
 
-![00007-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00007-Generate-CodePipeline.png?width=90pc)
+![00007-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00007-Generate-CodePipeline.png?width=90pc)
 
 8. Kéo xuống cuối trang và chọn **Create stack**
 
-![00008-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00008-Generate-CodePipeline.png?width=90pc)
+![00008-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00008-Generate-CodePipeline.png?width=90pc)
 
 9.  Hoàn thành tạo stack
 
-![00009-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00009-Generate-CodePipeline.png?width=90pc)
+![00009-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/00009-Generate-CodePipeline.png?width=90pc)
 
 10. Trong giao diện [AWS Console](https://aws.amazon.com/console/)
 - Tìm  **CodePipeline**
 - Chọn  **CodePipeline**
 
-![000010-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000010-Generate-CodePipeline.png?width=90pc)
+![000010-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000010-Generate-CodePipeline.png?width=90pc)
 
 11. Quá trình CI/CD
 
-![000011-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000011-Generate-CodePipeline.png?width=90pc)
+![000011-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000011-Generate-CodePipeline.png?width=90pc)
 
 12. Quá trình CI/CD hoàn thành khi chuyển sang trang thái **Succeeded**
 
-![000012-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000012-Generate-CodePipeline.png?width=90pc)
+![000012-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000012-Generate-CodePipeline.png?width=90pc)
 
 
 13. Kiểm tra
-![000017-Generate-CodePipeline](../images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000017-Generate-CodePipeline.png?width=90pc)
+![000017-Generate-CodePipeline](/images/4-Generate-Code-Pipeline/6-Generate-CodePipeline/000017-Generate-CodePipeline.png?width=90pc)

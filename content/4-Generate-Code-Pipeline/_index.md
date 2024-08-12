@@ -9,7 +9,7 @@ pre = "<b>4. </b>"
 ### Overview
 - In the next steps, we will create a Deployment Pipeline using AWS CodePipeline and integrate with the third party tool GitHub. When we change the code on GitHub, our Pipeline will be activated and deploy the new version of the application to the web application we already run on the EKS Cluster.
 
-![architecture](../images/4-Generate-Code-Pipeline/architecture.png?width=90pc)
+![architecture](/images/4-Generate-Code-Pipeline/architecture.png?width=90pc)
 
 ### Content
 1. [Create S3 bucket](1-Create-S3-bucket)
