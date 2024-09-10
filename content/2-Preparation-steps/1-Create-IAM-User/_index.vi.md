@@ -29,6 +29,7 @@ pre = "<b>2.1. </b>"
 - Chọn **Next:Permissions**
 
 ![0003-createiamuser](/000062_CICDonEKS/images/2-Preparation-steps/1-Create-IAM-User/0003-createiamuser.png?width=90pc)
+![0003-createiamuser](/000062_CICDonEKS/images/2-Preparation-steps/1-Create-IAM-User/0003.1-createiamuser.png?width=90pc)
 
 4. Trong bước tiếp theo của **Add user**
 - Chọn  **Attach existing policies directly**
