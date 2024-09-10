@@ -8,7 +8,7 @@ pre = "<b>2.4. </b>"
 
 #### Installing eksctl
 
-1. In this section we will install the eksctl tool into CloudShell Workspace.
+1. In this section we will install the eksctl tool into CloudShell.
 - Run the command to download the eksctl tool.
 ```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp

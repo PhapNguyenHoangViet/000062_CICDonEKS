@@ -8,7 +8,7 @@ pre = "<b>2.3. </b>"
 
 #### Installing Kubernetes Tool
 
-1. Copy and Paste the command below into **Terminal of Workspace** to install **kubectl**.
+1. Copy and Paste the command below into **Terminal** to install **kubectl**.
 ```
 sudo curl --silent --location -o /usr/local/bin/kubectl \
   https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.11/2020-09-18/bin/linux/amd64/kubectl

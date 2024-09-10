@@ -8,7 +8,7 @@ pre = "<b>2.4. </b>"
 
 #### Cài đặt eksctl
 
-1. Trong phần này chúng ta sẽ thực hiện cài đặt công cụ **eksctl** vào **CloudShell Workspace.**
+1. Trong phần này chúng ta sẽ thực hiện cài đặt công cụ **eksctl** vào **CloudShell.**
 - Chạy câu lệnh để tải về công cụ eksctl.
 ```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp

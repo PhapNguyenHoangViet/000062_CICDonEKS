@@ -1,5 +1,5 @@
 +++
-title = "Use CloudShell"
+title = "Using CloudShell"
 date = 2024
 weight = 2
 chapter = false
@@ -29,7 +29,7 @@ sudo yum -y install jq gettext bash-completion
 
 ![00003-Create-Workspace](/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00003-Create-Workspace.png?width=90pc)
 
-4. Copy and Paste the command below into **Terminal of Workspace** to update **awscli**.
+1. Copy and Paste the command below into **Terminal** to update **awscli**.
 ```
 sudo pip install --upgrade awscli && hash -r
 ```

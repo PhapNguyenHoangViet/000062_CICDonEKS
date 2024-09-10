@@ -8,7 +8,7 @@ pre = "<b>2.3. </b>"
 
 #### Cài đặt Kubernetes Tool
 
-1. Copy và Paste đoạn lệnh dưới đây vào **Terminal của Workspace** để cài đặt **kubectl**.
+1. Copy và Paste đoạn lệnh dưới đây vào **Terminal** để cài đặt **kubectl**.
 ```
 sudo curl --silent --location -o /usr/local/bin/kubectl \
   https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.11/2020-09-18/bin/linux/amd64/kubectl
