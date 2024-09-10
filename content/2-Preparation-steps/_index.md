@@ -11,6 +11,6 @@ pre = "<b>2. </b>"
 
 ### Content
 1. [Create IAM User](1-Create-IAM-User)
-2. [Create Workspace](2-Create-Workspace)
+2. [CloudShell](2-Create-Workspace)
 3. [Install Kubernetes Tool](3-Install-Kubernetes-Tool)
 4. [Install Eksctl Tool](4-Install-eksctl)

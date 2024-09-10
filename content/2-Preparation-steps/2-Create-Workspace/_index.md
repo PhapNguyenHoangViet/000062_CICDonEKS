@@ -1,12 +1,12 @@
 +++
-title = "Create Workspace"
+title = "Use CloudShell"
 date = 2024
 weight = 2
 chapter = false
 pre = "<b>2.2. </b>"
 +++
 
-#### Create Workspace
+#### CloudShell
 1. Access the [AWS Management Console](https://console.aws.amazon.com/console/) interface
 
 - Search **CloudShell**

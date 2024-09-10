@@ -1,12 +1,12 @@
 +++
-title = "Tạo Workspace"
+title = "Sử dụng CloudShell"
 date = 2024
 weight = 2
 chapter = false
 pre = "<b>2.2. </b>"
 +++
 
-#### Tạo Workspace
+#### CloudShell
 1. Truy cập vào giao diện [AWS Management Console](https://console.aws.amazon.com/console/) 
 
 - Tìm**CloudShell**
