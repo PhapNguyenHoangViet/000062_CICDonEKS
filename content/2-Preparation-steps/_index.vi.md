@@ -11,6 +11,6 @@ pre = "<b>2. </b>"
 
 ### Nội dung
 1. [Tạo IAM User](1-Create-IAM-User)
-2. [Tạo Workspace](2-Using-CloudShell)
+2. [Sử dụng CloudShell](2-Using-CloudShell)
 3. [Cài đặt Kubernetes Tool](3-Install-Kubernetes-Tool)
 4. [Cài đặt eksctl Tool](4-Install-eksctl)
