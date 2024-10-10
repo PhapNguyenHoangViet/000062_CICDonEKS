@@ -14,7 +14,7 @@ pre = "<b>1. </b>"
    - In this lab, we will create a simple **Kubernetes Cluster** on **AWS EKS (Elastic Kubernetes Service)**.
    - Then I will deploy the site on the cluster and use **AWS CodePipeLine** for automated deployment.
 
-![architecture](/000062_CICDonEKS/images/CI_CDwithAWSCodePipeline.png?width=90pc)
+![architecture](/images/CI_CDwithAWSCodePipeline.png?width=90pc)
 
 ### Content
   1. [Introduction](1-Introduction/)

@@ -13,13 +13,13 @@ pre = "<b>4.4. </b>"
 ```
 kubectl get configmaps aws-auth -n kube-system -o yaml > aws-auth.yaml
 ```
-![00001-Configure-RBAC](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00001-Configure-RBAC.png?width=90pc)
+![00001-Configure-RBAC](/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00001-Configure-RBAC.png?width=90pc)
 
 2. Mở tập tin **aws-auth.yaml** vừa tạo ở trên:
 ```
 nano aws-auth.yaml
 ```
-![00002-Configure-RBAC](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00002-Configure-RBAC.png?width=90pc)
+![00002-Configure-RBAC](/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00002-Configure-RBAC.png?width=90pc)
 
 3. Sửa file **aws-auth.yaml** này, thêm một item trong mảng **data.mapRoles**:
 ```
@@ -29,7 +29,7 @@ nano aws-auth.yaml
   username: codebuild-eks
 
 ```
-![00003-Configure-RBAC](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00003-Configure-RBAC.png?width=90pc)
+![00003-Configure-RBAC](/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00003-Configure-RBAC.png?width=90pc)
 
 4. Tập tin aws-auth.yaml sau khi thêm role eks-CodeBuildServiceRole có dạng như sau:
 {{% notice note %}}
@@ -67,10 +67,10 @@ metadata:
   uid: a2862e92-4697-4654-bb19-dc28b17dc21b
 ```
 
-![00005-Configure-RBAC](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00005-Configure-RBAC.png?width=90pc)
+![00005-Configure-RBAC](/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00005-Configure-RBAC.png?width=90pc)
 5. Apply tập tin **aws-auth.yaml** đã thay đổi từ terminal:
 ```
 kubectl apply -f aws-auth.yaml
 ```
 
-![00004-Configure-RBAC](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00004-Configure-RBAC.png?width=90pc)
+![00004-Configure-RBAC](/images/4-Generate-Code-Pipeline/4-Configure-RBAC/00004-Configure-RBAC.png?width=90pc)

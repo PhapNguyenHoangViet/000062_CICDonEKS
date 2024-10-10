@@ -12,21 +12,21 @@
     <title>Create EKS Cluster :: CI/CD on EKS</title>
 
     
-    <link href="/css/nucleus.css?1725958572" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725958572" rel="stylesheet">
-    <link href="/css/hybrid.css?1725958572" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725958572" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725958572" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725958572" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725958572" rel="stylesheet">
-    <link href="/css/theme.css?1725958572" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725958572" rel="stylesheet">
+    <link href="/css/nucleus.css?1728548861" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1728548861" rel="stylesheet">
+    <link href="/css/hybrid.css?1728548861" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1728548861" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1728548861" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728548861" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1728548861" rel="stylesheet">
+    <link href="/css/theme.css?1728548861" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1728548861" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725958572" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1728548861" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725958572"></script>
+    <script src="/js/jquery-3.3.1.min.js?1728548861"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725958572"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725958572"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1728548861"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1728548861"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725958572"></script>
+<script type="text/javascript" src="/js/search.js?1728548861"></script>
 
     
   </div>
@@ -167,12 +167,12 @@
  
   
     
-    <li data-nav-id="/2-preparation-steps/2-create-workspace/" title="Using CloudShell" class="dd-item 
+    <li data-nav-id="/2-preparation-steps/2-using-cloudshell/" title="Using CloudShell" class="dd-item 
         
         
         
         ">
-      <a href="/2-preparation-steps/2-create-workspace/">
+      <a href="/2-preparation-steps/2-using-cloudshell/">
           <b>2.2. </b>Using CloudShell
           
             <i class="fas fa-check read-icon"></i>
@@ -856,7 +856,7 @@
 <li>To create <strong>EKS cluster</strong>, we will first have to generate <strong>SSH key</strong> to be able to access <strong>EC2 Node</strong> in the Cluster as needed:</li>
 </ol>
 <pre tabindex="0"><code>aws ec2 create-key-pair --key-name k8s-demo --query &#39;KeyMaterial&#39; --output text&gt; k8s-demo.pem
-</code></pre><p><img alt="00001-Create-EKS-cluster" src="/000062_CICDonEKS/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00001-Create-EKS-Cluster.png?width=90pc"></p>
+</code></pre><p><img alt="00001-Create-EKS-cluster" src="/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00001-Create-EKS-Cluster.png?width=90pc"></p>
 <ol start="2">
 <li>In the <strong>AWS Console interface</strong></li>
 </ol>
@@ -864,7 +864,7 @@
 <li>Find <strong>EC2</strong></li>
 <li>Select <strong>EC2</strong></li>
 </ul>
-<p><img alt="00002-Create-EKS-cluster" src="/000062_CICDonEKS/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00002-Create-EKS-Cluster.png?width=90pc"></p>
+<p><img alt="00002-Create-EKS-cluster" src="/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00002-Create-EKS-Cluster.png?width=90pc"></p>
 <ol start="3">
 <li>In <strong>EC2</strong> interface</li>
 </ol>
@@ -872,7 +872,7 @@
 <li>Select <strong>Key Pair</strong></li>
 <li>View <strong>Key Pair</strong> just created</li>
 </ul>
-<p><img alt="00003-Create-EKS-cluster" src="/000062_CICDonEKS/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00003-Create-EKS-Cluster.png?width=90pc"></p>
+<p><img alt="00003-Create-EKS-cluster" src="/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00003-Create-EKS-Cluster.png?width=90pc"></p>
 <ol start="4">
 <li>To create <strong>EKS Cluster</strong> and <strong>EC2 Nodes</strong> we use the following command:</li>
 </ol>
@@ -880,11 +880,11 @@
 </code></pre><ul>
 <li>When you run this command, <strong>eksctl</strong> will use <strong>AWS CloudFormation</strong> to create the necessary infrastructure and setup <strong>Master Node <strong>(Control Plane).</strong></strong></li>
 </ul>
-<p><img alt="00004-Create-EKS-cluster" src="/000062_CICDonEKS/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00004-Create-EKS-Cluster.png?width=90pc"></p>
+<p><img alt="00004-Create-EKS-cluster" src="/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00004-Create-EKS-Cluster.png?width=90pc"></p>
 <ol start="5">
 <li>Interface after creating <strong>EKS Cluster.</strong></li>
 </ol>
-<p><img alt="00005-Create-EKS-cluster" src="/000062_CICDonEKS/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00005-Create-EKS-Cluster.png?width=90pc"></p>
+<p><img alt="00005-Create-EKS-cluster" src="/images/3-Create-EKS-cluster/1-Create-EKS-Cluster/00005-Create-EKS-Cluster.png?width=90pc"></p>
 
 <div class="notices note" ><p>It takes about 15 minutes to complete the initialization of <strong>EKS Cluster</strong></p>
 </div>
@@ -1264,19 +1264,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725958572"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725958572"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725958572"></script>
-    <script src="/js/jquery.sticky.js?1725958572"></script>
-    <script src="/js/featherlight.min.js?1725958572"></script>
-    <script src="/js/highlight.pack.js?1725958572"></script>
+    <script src="/js/clipboard.min.js?1728548861"></script>
+    <script src="/js/perfect-scrollbar.min.js?1728548861"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1728548861"></script>
+    <script src="/js/jquery.sticky.js?1728548861"></script>
+    <script src="/js/featherlight.min.js?1728548861"></script>
+    <script src="/js/highlight.pack.js?1728548861"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725958572"></script>
-    <script src="/js/learn.js?1725958572"></script>
-    <script src="/js/hugo-learn.js?1725958572"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1728548861"></script>
+    <script src="/js/learn.js?1728548861"></script>
+    <script src="/js/hugo-learn.js?1728548861"></script>
 
-    <link href="/mermaid/mermaid.css?1725958572" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725958572"></script>
+    <link href="/mermaid/mermaid.css?1728548861" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1728548861"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

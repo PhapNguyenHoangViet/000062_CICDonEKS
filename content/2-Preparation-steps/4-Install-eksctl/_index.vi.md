@@ -16,14 +16,14 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv -v /tmp/eksctl /usr/local/bin
 
 ```
-![00001-Install-eksctl](/000062_CICDonEKS/images/2-Preparation-steps/4-Install-eksctl/00001-Install-eksctl.png?width=90pc)
+![00001-Install-eksctl](/images/2-Preparation-steps/4-Install-eksctl/00001-Install-eksctl.png?width=90pc)
 
 2. Kiểm tra eksctl hoạt động hay không bằng câu lệnh dưới đây.
 ```
 eksctl version
 
 ```
-![00002-Install-eksctl](/000062_CICDonEKS/images/2-Preparation-steps/4-Install-eksctl/00002-Install-eksctl.png?width=90pc)
+![00002-Install-eksctl](/images/2-Preparation-steps/4-Install-eksctl/00002-Install-eksctl.png?width=90pc)
 
 3. Kích hoạt tính năng bash-completion của eksctl
 ```
@@ -32,7 +32,7 @@ eksctl completion bash >> ~/.bash_completion
 . ~/.bash_completion
 
 ```
-![00003-Install-eksctl](/000062_CICDonEKS/images/2-Preparation-steps/4-Install-eksctl/00003-Install-eksctl.png?width=90pc)
+![00003-Install-eksctl](/images/2-Preparation-steps/4-Install-eksctl/00003-Install-eksctl.png?width=90pc)
 
 
 {{% notice note %}}

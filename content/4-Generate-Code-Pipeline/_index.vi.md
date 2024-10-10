@@ -9,7 +9,7 @@ pre = "<b>4. </b>"
 ### Tổng quan
 - Trong các bước tiếp theo, chúng ta sẽ tạo một Deployment Pipeline bằng AWS CodePipeline và tích hợp với công cụ third party là GitHub. Khi chúng ta thay đổi code trên GitHub, Pipeline của chúng ta sẽ được kích hoạt và deploy phiên bản ứng dụng mới lên ứng dụng web chúng ta đã chạy trên EKS Cluster.
 
-![architecture](/000062_CICDonEKS/images/4-Generate-Code-Pipeline/architecture.png?width=90pc)
+![architecture](/images/4-Generate-Code-Pipeline/architecture.png?width=90pc)
 
 ### Nội dung
 1. [Tạo S3 bucket](1-Create-S3-bucket)
