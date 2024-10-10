@@ -56,7 +56,7 @@
 	"content": "Overview To prepare for the lab, we will use CloudShell and will need to install some tools for system administration on EKS including kubectl and eksctl. Content Create IAM User Using CloudShell Install Kubernetes Tool Install Eksctl Tool "
 },
 {
-	"uri": "//localhost:1313/2-preparation-steps/2-create-workspace/",
+	"uri": "//localhost:1313/2-preparation-steps/2-using-cloudshell/",
 	"title": "Using CloudShell",
 	"tags": [],
 	"description": "",

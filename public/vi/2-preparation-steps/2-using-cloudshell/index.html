@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>CI/CD trên EKS :: CI/CD trên EKS</title>
+    <title>Sử dụng CloudShell :: CI/CD trên EKS</title>
 
     
     <link href="/css/nucleus.css?1728549648" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/">
+  <body class="" data-url="/vi/2-preparation-steps/2-using-cloudshell/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -109,7 +109,7 @@
   
     
     <li data-nav-id="/vi/2-preparation-steps/" title="Các bước chuẩn bị" class="dd-item 
-        
+        parent
         
         
         ">
@@ -169,7 +169,7 @@
     
     <li data-nav-id="/vi/2-preparation-steps/2-using-cloudshell/" title="Sử dụng CloudShell" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/vi/2-preparation-steps/2-using-cloudshell/">
@@ -667,7 +667,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/">English</option>
+                      <option id="en" value="//localhost:1313/2-preparation-steps/2-using-cloudshell/">English</option>
                     
                   
               
@@ -681,7 +681,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-preparation-steps/2-using-cloudshell/" selected>Tiếng Việt</option>
                     
                   
               
@@ -764,35 +764,152 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://PhapNguyenHoangViet.github.io/CICDonEKS/2-Preparation-steps/2-Using-CloudShell/_index.vi.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>CI/CD trên EKS</a> > <a href='/vi/2-preparation-steps/'>Các bước chuẩn bị</a> > Sử dụng CloudShell
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Sử dụng CloudShell
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="cicd-trên-eks-với-codepipeline-và-github">CI/CD trên EKS với CodePipeline và GitHub</h1>
+
+	<h4 id="cloudshell">CloudShell</h4>
+<ol>
+<li>Truy cập vào giao diện <a href="https://console.aws.amazon.com/console/">AWS Management Console</a></li>
+</ol>
 <ul>
-<li>
-<p><strong>Amazon Elastic Kubernetes Service (Amazon EKS)</strong> là một dịch vụ container orchestration được quản lý bởi AWS giúp chúng ta để tạo, quản lý, khởi chạy và thay đổi quy mô các ứng dụng Kubernetes trong môi trường AWS hoặc cả môi trường on-premise.</p>
-</li>
-<li>
-<p><strong>AWS CodePipeline</strong> là dịch vụ phân phối liên tục giúp bạn tự động hóa các deployment pipeline giúp cho việc cập nhật phiên bản mới của ứng dụng hoặc hạ tầng một cách ổn định. CodePipeline tự động hóa việc xây dựng, thử nghiệm và triển khai các giai đoạn của quá trình deploy của bạn mỗi khi có sự thay đổi mã, dựa trên mô hình deploy mà bạn xác định. Bạn có thể tích hợp <strong>AWS CodePipeline</strong> với các dịch vụ của bên thứ ba như <strong>GitHub</strong> hoặc với plugin tùy chỉnh của riêng bạn. Với <strong>AWS CodePipeline</strong>, bạn chỉ phải trả tiền cho những gì bạn sử dụng. Bạn không phải trả tiền trước hay thực hiện cam kết dài hạn.</p>
-</li>
-<li>
-<p>Trong bài thực hành này, chúng ta sẽ tạo một <strong>EKS Cluster</strong> và tiến hành triển khai một pipeline để tự động deploy lên môi trường production mỗi khi có thay đổi về code bằng dịch vụ <strong>AWS CodePipeline</strong>.</p>
-</li>
+<li>Tìm<strong>CloudShell</strong></li>
+<li>Chon <strong>CloudShell</strong></li>
 </ul>
-<p><img alt="architecture" src="/000062_CICDonEKS/images/architecture.png?width=90pc"></p>
+<p><img alt="00001-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00001-Create-Workspace.png?width=90pc"></p>
+<ol start="2">
+<li>Trong giao diện <strong>AWS CloudShell</strong></li>
+</ol>
+<ul>
+<li>Thường thì khi chọn vào dịch vụ AWS CloudShell sẽ tự động tạo ra môi trường CLI cho chúng ta thực thi lệnh.</li>
+<li>Nhưng trong vài trường hợp, CloudShell sẽ không tự động tạo sẵn, do đó, ta sẽ ấn chọn Open environment – trong đó là tên region khi mở CloudShell.</li>
+</ul>
+<p><img alt="00002-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00002-Create-Workspace.png?width=90pc"></p>
+<ol start="3">
+<li>Copy and paste the following command into the <strong>CloudShell</strong> Terminal to install tools that support text processing on the command line.</li>
+</ol>
+<pre tabindex="0"><code>sudo yum -y install jq gettext bash-completion
+</code></pre><p><img alt="00003-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00003-Create-Workspace.png?width=90pc"></p>
+<ol start="4">
+<li>Copy và Paste đoạn lệnh dưới đây vào Terminal của CloudShell để cài đặt các công cụ hỗ trợ xử lý text trên dòng lệnh.</li>
+</ol>
+<pre tabindex="0"><code>sudo pip install --upgrade awscli &amp;&amp; hash -r
+</code></pre><p><img alt="00004-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00004-Create-Workspace.png?width=90pc"></p>
+<ol start="5">
+<li>Chúng ta sẽ cấu hình <strong>aws cli</strong> sử dụng Region hiện tại.</li>
+</ol>
+<pre tabindex="0"><code>export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
+export AWS_REGION=&lt;REGION&gt;
+export AZS=($(aws ec2 describe-availability-zones --query &#39;AvailabilityZones[].ZoneName&#39; --output text --region $AWS_REGION))
+</code></pre><p><strong>export AWS_REGION=&lsquo;yourREGION&rsquo;</strong>, thay trường thành id của region mà CloudShell đang mở.</p>
+<p><img alt="00005-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00005-Create-Workspace.png?width=90pc"></p>
+<ol start="6">
+<li>Kiểm tra Region hiện tại</li>
+</ol>
+<pre tabindex="0"><code>test -n &#34;$AWS_REGION&#34; &amp;&amp; echo AWS_REGION is &#34;$AWS_REGION&#34; || echo AWS_REGION is not set
+</code></pre><p><img alt="00006-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00006-Create-Workspace.png?width=90pc"></p>
+<ol start="7">
+<li>Chúng ta sẽ lưu các thông tin cấu hình vào bash_profile</li>
+</ol>
+<pre tabindex="0"><code>echo &#34;export ACCOUNT_ID=$ACCOUNT_ID&#34; | tee -a ~/.bash_profile
+echo &#34;export AWS_REGION=$AWS_REGION&#34; | tee -a ~/.bash_profile
+echo &#34;export AZS=${AZS[@]}&#34; | tee -a ~/.bash_profile
+aws configure set default.region $AWS_REGION
+aws configure get default.region
+</code></pre><p><img alt="00007-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00007-Create-Workspace.png?width=90pc"></p>
+<ol start="8">
+<li>Chúng ta sẽ sử dụng câu lệnh để kiểm tra CloudShell đang sử dụng IAM Role có chính xác không.</li>
+</ol>
+<pre tabindex="0"><code>aws sts get-caller-identity --query Arn | grep CloudFormation-Role -q &amp;&amp; echo &#34;IAM role valid&#34; || echo &#34;IAM role NOT valid&#34;
+</code></pre><p><img alt="00008-Create-Workspace" src="/000062_CICDonEKS/images/2-Preparation-steps/2-Create-Workspace/00008-Create-Workspace.png?width=90pc"></p>
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
         </div> 
         
@@ -843,6 +960,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -857,6 +975,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -874,6 +995,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -889,6 +1011,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1141,8 +1266,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/vi/2-preparation-steps/1-create-iam-user/" title="Tạo IAM User"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/vi/2-preparation-steps/3-install-kubernetes-tool/" title="Cài đặt Kubernetes Tool" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1180,4 +1307,3 @@
 </script>
   </body>
 </html>
-

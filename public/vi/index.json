@@ -42,7 +42,7 @@
 	"content": "Kiểm tra EKS Cluster Trong giao diện AWS Console Tìm CloudFormation Chọn CloudFormation Trong giao diện CloudFormation Chọn Stack Xem các stack đã tạo Chạy câu lệnh để kiểm tra các nodes được tạo kubectl get nodes Trong giao diện AWS Console Tìm EKS Chọn EKS Trong giao diện EKS Chọn Cluster Xem cluster đã tạo Trong giao diện AWS Console Tìm EC2 Chọn EC2 Trong giao diện EC2 Chọn Instances Xem các instance đã tạo "
 },
 {
-	"uri": "//localhost:1313/vi/2-preparation-steps/2-create-workspace/",
+	"uri": "//localhost:1313/vi/2-preparation-steps/2-using-cloudshell/",
 	"title": "Sử dụng CloudShell",
 	"tags": [],
 	"description": "",
@@ -60,7 +60,7 @@
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
-	"content": "Tổng quan Để chuẩn bị cho bài lab, chúng ta sử dụng CloudShell để làm workspace và sẽ cần cài đặt một số công cụ để quản trị hệ thống trên EKS bao gồm kubectl và eksctl. Nội dung Tạo IAM User Tạo Workspace Cài đặt Kubernetes Tool Cài đặt eksctl Tool "
+	"content": "Tổng quan Để chuẩn bị cho bài lab, chúng ta sử dụng CloudShell để làm workspace và sẽ cần cài đặt một số công cụ để quản trị hệ thống trên EKS bao gồm kubectl và eksctl. Nội dung Tạo IAM User Sử dụng CloudShell Cài đặt Kubernetes Tool Cài đặt eksctl Tool "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparation-steps/3-install-kubernetes-tool/",
